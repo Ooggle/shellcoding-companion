@@ -54,3 +54,5 @@ optional arguments:
 ## Contributing
 
 Pull requests are welcome. Feel free to open an issue if you want to add other features.
+
+Thanks to [@Podalirius](https://github.com/p0dalirius) for helping setting up the project!
