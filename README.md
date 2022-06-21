@@ -21,7 +21,7 @@ sudo apt install nasm
 
 ## Usage
 
-```sh
+```
 $ ./shellcoding-companion.py -h
 
  __ _          _ _               _ _                      
