@@ -4,3 +4,21 @@
 [![img last release](https://img.shields.io/twitter/follow/Ooggle_.svg?style=social)](https://twitter.com/Ooggle_)
 
 # shellcoding-companion
+
+## Dependancies
+
+- nasm
+- objdump
+- python3
+
+## Setup
+
+```sh
+sudo apt install nasm
+```
+
+## Usage
+
+```sh
+python3 shellcoding-companion.py -h
+```
