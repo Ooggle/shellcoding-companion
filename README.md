@@ -3,9 +3,8 @@
 <p align="center">
     A python script to automatically generate shellcode payload from assembly files.
     <br>
-    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Ooggle/shellcoding-companion">
+    <img alt="img last release" src="https://img.shields.io/github/release/Ooggle/shellcoding-companion.svg?color=blue">
     <img alt="img last commit" src="https://img.shields.io/github/last-commit/Ooggle/shellcoding-companion.svg">
-    <img alt="img last release" src="https://img.shields.io/github/release/Ooggle/shellcoding-companion.svg?color=red">
     <a href="https://twitter.com/intent/follow?screen_name=Ooggle_" title="Follow"><img src="https://img.shields.io/twitter/follow/Ooggle_?label=Ooggle_&style=social"></a>
     <br>
 </p>
