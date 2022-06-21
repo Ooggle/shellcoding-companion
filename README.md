@@ -28,7 +28,7 @@ $ ./shellcoding-companion.py -h
 / _\ |__   ___| | | ___ ___   __| (_)_ __   __ _          
 \ \| '_ \ / _ \ | |/ __/ _ \ / _` | | '_ \ / _` |         
 _\ \ | | |  __/ | | (_| (_) | (_| | | | | | (_| |         
-\__/_| |_|\___|_|_|\___\___/ \__,_|_|_| |_|\__, |_v0.2.0
+\__/_| |_|\___|_|_|\___\___/ \__,_|_|_| |_|\__, |_v1.0.0
            / __\___  _ __ ___  _ __   __ _ |___/(_) ___  _ __
           / /  / _ \| '_ ` _ \| '_ \ / _` | '_ \| |/ _ \| '_ \ 
          / /__| (_) | | | | | | |_) | (_| | | | | | (_) | | | |
@@ -36,7 +36,7 @@ _\ \ | | |  __/ | | (_| (_) | (_| | | | | | (_| |
                     By Ooggle |_| https://twitter.com/Ooggle_
 
 
-usage: ./shellcoding-companion.py [-h] [-o OUTPUT] [-p] source [source ...]
+usage: ./shellcoding-companion.py [-h] [-o OUTPUT] [-p2] [-p3] [-P] source [source ...]
 
 positional arguments:
   source                NASM source(s) file(s) (Example: shellcode.s)
@@ -45,7 +45,12 @@ optional arguments:
   -h, --help            show this help message and exit
   -o OUTPUT, --output OUTPUT
                         Output file for the shellcode. (default: None)
-  -p, --python          Output python command to generate the shellcode from command line. (default: False)
+
+  Output languages
+
+  -p2, --python2        Output python2 command to generate the shellcode from command line. (default: False)
+  -p3, --python3        Output python3 command to generate the shellcode from command line. (default: False)
+  -P, --perl            Output perl command to generate the shellcode from command line. (default: False)
 ```
 
 ## Contributing
