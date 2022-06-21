@@ -1,17 +1,19 @@
-[![img release](https://img.shields.io/github/commit-activity/m/Ooggle/shellcoding-companion.svg?sanitize=true&color=blue)](#)
-[![img last commit](https://img.shields.io/github/last-commit/Ooggle/shellcoding-companion.svg)](#)
-[![img last release](https://img.shields.io/github/release/Ooggle/shellcoding-companion.svg?color=red)](#)
-[![img last release](https://img.shields.io/twitter/follow/Ooggle_.svg?style=social)](https://twitter.com/Ooggle_)
+![](./.github/banner.png)
 
-# shellcoding-companion
+<p align="center">
+    A python script to automatically generate shellcode payload from assembly files.
+    <br>
+    <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/Ooggle/shellcoding-companion">
+    <img alt="img release" src="https://img.shields.io/github/commit-activity/m/Ooggle/shellcoding-companion.svg?sanitize=true&color=blue">
+    <img alt="img last commit" src="https://img.shields.io/github/last-commit/Ooggle/shellcoding-companion.svg">
+    <img alt="img last release" src="https://img.shields.io/github/release/Ooggle/shellcoding-companion.svg?color=red">
+    <a href="https://twitter.com/intent/follow?screen_name=Ooggle_" title="Follow"><img src="https://img.shields.io/twitter/follow/Ooggle_?label=Ooggle_&style=social"></a>
+    <br>
+</p>
 
-## Dependancies
+## Requirements
 
-- nasm
-- objdump
-- python3
-
-## Setup
+To use this tool, you first need to install `nasm`, `objdump` and `python3`. You can install them with:
 
 ```sh
 sudo apt install nasm
@@ -20,5 +22,32 @@ sudo apt install nasm
 ## Usage
 
 ```sh
-python3 shellcoding-companion.py -h
+$ ./shellcoding-companion.py -h
+
+ __ _          _ _               _ _                      
+/ _\ |__   ___| | | ___ ___   __| (_)_ __   __ _          
+\ \| '_ \ / _ \ | |/ __/ _ \ / _` | | '_ \ / _` |         
+_\ \ | | |  __/ | | (_| (_) | (_| | | | | | (_| |         
+\__/_| |_|\___|_|_|\___\___/ \__,_|_|_| |_|\__, |_v0.2.0
+           / __\___  _ __ ___  _ __   __ _ |___/(_) ___  _ __
+          / /  / _ \| '_ ` _ \| '_ \ / _` | '_ \| |/ _ \| '_ \ 
+         / /__| (_) | | | | | | |_) | (_| | | | | | (_) | | | |
+         \____/\___/|_| |_| |_| .__/ \__,_|_| |_|_|\___/|_| |_|
+                    By Ooggle |_| https://twitter.com/Ooggle_
+
+
+usage: ./shellcoding-companion.py [-h] [-o OUTPUT] [-p] source [source ...]
+
+positional arguments:
+  source                NASM source(s) file(s) (Example: shellcode.s)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o OUTPUT, --output OUTPUT
+                        Output file for the shellcode. (default: None)
+  -p, --python          Output python command to generate the shellcode from command line. (default: False)
 ```
+
+## Contributing
+
+Pull requests are welcome. Feel free to open an issue if you want to add other features.
