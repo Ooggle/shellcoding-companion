@@ -10,7 +10,7 @@ from lib.shellcode_parser import asm_parse, asm_build
 from binascii import unhexlify
 import argparse
 
-version_number = '0.2.0'
+version_number = '1.0.0'
 
 banner = f"""\x1b[0;33m
  __ _          _ _               _ _                      
