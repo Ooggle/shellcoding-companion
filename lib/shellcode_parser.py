@@ -7,7 +7,7 @@
 import os
 
 
-def asm_parse(pathname, label_start, opcode_end=False, debug=False):
+def asm_parse(pathname, label_start, opcode_end=False, debug=False, show=False):
     objdump = os.popen(f'objdump -d {pathname}').read().split('\n')
 
     # skip to start of shellcode
@@ -21,6 +21,9 @@ def asm_parse(pathname, label_start, opcode_end=False, debug=False):
     # start parsing
     while i < len(objdump):
         if objdump[i][10:32].rstrip() != '':
+            # show shellcode if needed
+            if show:
+                print(objdump[i])
             shellcode += objdump[i][10:32].rstrip() + ' '
             if opcode_end:
                 if opcode_end in objdump[i]:

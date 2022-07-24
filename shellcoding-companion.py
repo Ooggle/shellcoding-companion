@@ -10,7 +10,7 @@ from lib.shellcode_parser import asm_parse, asm_build
 from binascii import unhexlify
 import argparse
 
-version_number = '1.0.0'
+version_number = '1.0.1'
 
 banner = f"""\x1b[0;33m
  __ _          _ _               _ _                      
@@ -26,8 +26,11 @@ _\ \ | | |  __/ | | (_| (_) | (_| | | | | | (_| |
 
 """
 
-print(banner)
-
+class CustomParser(argparse.ArgumentParser):
+    def error(self, message):
+        sys.stderr.write('Error: %s\n' % message)
+        self.print_help()
+        sys.exit(2)
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -35,19 +38,23 @@ def parse_args():
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("-o", "--output", default=None, help="Output file for the shellcode.")
+    parser.add_argument("--show", default=False, action="store_true", help="Show the output shellcode.")
 
     group = parser.add_argument_group(description="Output languages")
     group.add_argument("-p2", "--python2", default=False, action="store_true", help='Output python2 command to generate the shellcode from command line.')
     group.add_argument("-p3", "--python3", default=False, action="store_true", help='Output python3 command to generate the shellcode from command line.')
     group.add_argument("-P", "--perl", default=False, action="store_true", help='Output perl command to generate the shellcode from command line.')
 
-    parser.add_argument("source", nargs="+", help="NASM source(s) file(s) (Example: shellcode.s)")
+    parser.add_argument("source", nargs="+", help="NASM source(s) file(s) (Example: shellcode.s).")
     args = parser.parse_args()
+    
     return args
 
 
 if __name__ == '__main__':
+    print(banner)
     args = parse_args()
+
 
     if len(os.popen("which nasm").read()) == 0:
         print("\x1b[1;31m[!] Missing requirement: nasm\x1b[0m")
@@ -123,5 +130,12 @@ if __name__ == '__main__':
             hex_bytecodes += hex_bytecode
 
         print(f'perl -e \'print "{hex_bytecodes}"\'')
+
+    if args.show:
+        print(f'\n\x1b[1;32m[+] Showing output shellcode\x1b[0m')
+
+        for source in args.source:
+            print(f'\x1b[0;32m[+] {source}.bin ...\x1b[0m')
+            (tmpbytes, _) = asm_parse(f'{source}.bin', '<.text>', show=True)
 
     print('\n\x1b[1;32m[+] Done!\x1b[0m\n')
