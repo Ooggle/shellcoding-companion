@@ -26,7 +26,7 @@ $ ./shellcoding-companion.py -h
 / _\ |__   ___| | | ___ ___   __| (_)_ __   __ _          
 \ \| '_ \ / _ \ | |/ __/ _ \ / _` | | '_ \ / _` |         
 _\ \ | | |  __/ | | (_| (_) | (_| | | | | | (_| |         
-\__/_| |_|\___|_|_|\___\___/ \__,_|_|_| |_|\__, |_v1.0.0
+\__/_| |_|\___|_|_|\___\___/ \__,_|_|_| |_|\__, |_v1.0.1
            / __\___  _ __ ___  _ __   __ _ |___/(_) ___  _ __
           / /  / _ \| '_ ` _ \| '_ \ / _` | '_ \| |/ _ \| '_ \ 
          / /__| (_) | | | | | | |_) | (_| | | | | | (_) | | | |
@@ -34,15 +34,16 @@ _\ \ | | |  __/ | | (_| (_) | (_| | | | | | (_| |
                     By Ooggle |_| https://twitter.com/Ooggle_
 
 
-usage: ./shellcoding-companion.py [-h] [-o OUTPUT] [-p2] [-p3] [-P] source [source ...]
+usage: ./shellcoding-companion.py [-h] [-o OUTPUT] [--show] [-p2] [-p3] [-P] source [source ...]
 
 positional arguments:
-  source                NASM source(s) file(s) (Example: shellcode.s)
+  source                NASM source(s) file(s). (Example: shellcode.s)
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   -o OUTPUT, --output OUTPUT
                         Output file for the shellcode. (default: None)
+  --show                Show the output shellcode. (default: False)
 
   Output languages
 

@@ -45,7 +45,7 @@ def parse_args():
     group.add_argument("-p3", "--python3", default=False, action="store_true", help='Output python3 command to generate the shellcode from command line.')
     group.add_argument("-P", "--perl", default=False, action="store_true", help='Output perl command to generate the shellcode from command line.')
 
-    parser.add_argument("source", nargs="+", help="NASM source(s) file(s) (Example: shellcode.s).")
+    parser.add_argument("source", nargs="+", help="NASM source(s) file(s). (Example: shellcode.s)")
     args = parser.parse_args()
     
     return args
