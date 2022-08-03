@@ -14,7 +14,7 @@
 To use this tool, you first need to install `nasm`, `objdump` and `python3`. You can install them with:
 
 ```sh
-sudo apt install nasm
+sudo apt install nasm python3
 ```
 
 ## Usage
