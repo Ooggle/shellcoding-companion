@@ -1,4 +1,4 @@
-![](./.github/banner.png)
+![banner](./.github/banner.png)
 
 <p align="center">
     A python script to automatically generate shellcode payload from assembly files.
@@ -51,6 +51,12 @@ options:
   -p3, --python3        Output python3 command to generate the shellcode from command line. (default: False)
   -P, --perl            Output perl command to generate the shellcode from command line. (default: False)
 ```
+
+## Example usage
+
+Echo python command to print the generated shellcode of `examples/shellcode.s`:
+
+![example usage](./.github/python-command-example.png)
 
 ## Contributing
 
