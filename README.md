@@ -56,6 +56,10 @@ options:
 
 Echo python command to print the generated shellcode of `examples/shellcode.s`:
 
+```shell
+./shellcoding-companion.py examples/shellcode.s -p2
+```
+
 ![example usage](./.github/python-command-example.png)
 
 ## Contributing
